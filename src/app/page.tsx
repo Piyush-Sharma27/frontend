@@ -20,6 +20,7 @@ export default function Home() {
   const [message, setMessage] = useState<string>("");
   
 
+  
   async function handleUserCreate(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     // console.log("in")
@@ -36,7 +37,7 @@ export default function Home() {
 
       setMessage("Student saved successfully")
       setTimeout(() => setMessage(""), 3000);
-      // router.push('/students');
+      router.push('/student');
     } catch (error) {
 
       console.error("Error while creating student", error)
